@@ -25,7 +25,7 @@ class <code>.hgs_rotate</code> assigned. This performs the rotation.
 When rotating the content, the current cell width will become the new cell height.
 The cell height for all cells will be set to the highest value found during iteration.
 Using <code> whitespace:nowrap</code> allows to set the width of the enclosing div to the
-original height of the content. This way the table cell will shrink down this new width
+original height of the content. This way the table cell will shrink down to this new width
 if possible.
 <p>
 The second iteration over these cells will adjust the relative position of the
