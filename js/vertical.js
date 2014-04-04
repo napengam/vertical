@@ -1,5 +1,6 @@
 function rotateHeadCell(tableId) {
     'use strict';
+
     var aRows = document.getElementById(tableId).rows, padding = 4;
     [].every.call(aRows, function(row) {
         if (row.cells[0].tagName !== 'TH') {
@@ -16,9 +17,8 @@ function rotateHeadCell(tableId) {
                 cell.vAlign = 'bottom';
                 return;
             }
-            cell.vAlign = 'middle';
             cell.innerHTML = '<div class=hgs_rotate>' + cell.innerHTML + '</div>';
-            w = cell.clientWidth;
+            w=cell.firstChild.clientWidth;            
             if (w > maxw) {
                 maxw = w;
                 cell.style.height = maxw + padding + 'px';
@@ -37,6 +37,7 @@ function rotateHeadCell(tableId) {
             dd.style.top = (cell.clientHeight - dd.clientHeight - padding) / 2 + 'px';
             dd.style.left = '0px';
             dd.style.position = 'relative';
+         
         });
     }
 }
