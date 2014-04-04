@@ -4,6 +4,8 @@
     -o-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     white-space: nowrap; 
+    float:left;
+    width:auto;
 }
 table, th,td{
     border:1px solid black;
