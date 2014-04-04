@@ -16,7 +16,7 @@ call  <code> rotateHeadCell('tab1');  </code>
 Logic
 =====
 
-The table is located using the gived id.
+The table is located using the given id.
 If the first cell of a row is of type TH the first 
 iteration looks for cells with a data attribute of <code>data-rotate</code>.
 The content of these cells is wrapped within a DIV that has the
