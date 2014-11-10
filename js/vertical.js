@@ -17,6 +17,7 @@ function rotateHeadCell(tableId) {
                 cell.vAlign = 'bottom';
                 return;
             }
+            cell.vAlign = 'middle';
             cell.innerHTML = '<div class=hgs_rotate>' + cell.innerHTML + '</div>';
             w=cell.firstChild.clientWidth;            
             if (w > maxw) {

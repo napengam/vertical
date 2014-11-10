@@ -3,6 +3,8 @@ vertical
 
 rotate table header cell 90 degree 
 
+A demo is located at <a href="http://hgsweb.de/vertical">hgsweb.de/nanoEditor/html</a>
+
 How to instrument your table:
 <ul>
 <li>Give your tabel an ID like &lt;table id=tab1>
