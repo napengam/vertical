@@ -3,6 +3,8 @@ vertical
 
 rotate table header cell 90 degree 
 
+As of 12 March 2015 this is working with IE11, Opera 28, FF 36 and Chrome 41.
+
 A demo is located at <a href="http://hgsweb.de/vertical">hgsweb.de/vertical</a>
 
 How to instrument your table:
@@ -19,7 +21,7 @@ Logic
 =====
 
 The table is located using the given id.
-If the first cell of a row is of type TH the first 
+If the first cell of a row is of type TH the 
 iteration looks for cells with a data attribute of <code>data-rotate</code>.
 The content of these cells is wrapped within a DIV that has the
 class <code>.hgs_rotate</code> assigned. This performs the rotation.
@@ -29,8 +31,3 @@ The cell height for all cells will be set to the highest value found during iter
 Using <code> whitespace:nowrap</code> allows to set the width of the enclosing div to the
 original height of the content. This way the table cell will shrink down to this new width
 if possible.
-<p>
-The second iteration over these cells will adjust the relative position of the
-rotated cell content, so it is positioned starting at the bottom of the cell.
-Giving the rotated content a relative position, allows it to maintain this position
-if any layout changes are made within this table column.    
