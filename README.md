@@ -4,6 +4,7 @@ vertical
 rotate table header cell 90 degree 
 
 As of 12 March 2015 this is working with IE11, Opera 28, FF 36 and Chrome 41.
+As of 31 MAy 2017 this is working with IE11, Edge, Opera 45, FF 53 and Chrome 58.
 
 A demo is located at <a href="http://hgsweb.de/vertical">hgsweb.de/vertical</a>
 
