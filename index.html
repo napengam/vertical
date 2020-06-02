@@ -1,39 +1,23 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>rotate</title>  
         <meta charset="UTF-8">
-        <link href="main.css" type="text/css" rel="stylesheet" >    
-        <link href="css/page.css" type="text/css" rel="stylesheet" >
-        <script src="js/vertical.js"></script>
-        <script>
-            function addEvent(obj, ev, fu) {
-                if (obj.addEventListener) {
-                    obj.addEventListener(ev, fu, false);
-                } else {
-                    var eev = 'on' + ev;
-                    obj.attachEvent(eev, fu);
-                }
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table,tr,td,th{
+                border:1px solid black;
+                border-collapse:collapse;
             }
-            addEvent(window, 'load', function() {
-                rotateHeadCell('t1');
-                rotateHeadCell('t2');
-                rotateHeadCell('t3');
-            });
-        </script>
+            th{
+                background-color:#f7f7f7;
+                color:black;
+            }
+        </style>
     </head> 
     <body>
-        <div class="content">
-            <div class="divhead" >                                                       
-                <i><a href="http://hgsweb.de"> <img  src="../home.png"></a><b  class="headLine">&nbsp;PHP &amp; JavaScript &amp; HTML &amp; CSS </b></i>
-                <b></b>
-                <span class="small"><b></b></span>                                     
-            </div>
-            <p class="title">Rotate header cells 90 degree with JavaScript
-
-            <h2><p>All the sources can by found at 
-                    <a href="https://github.com/napengam/vertical" 
-                       style="margin-left:1em;vertical-align:center">GitHub<img src="../GitHub.png"></a></p></h2> 
-
+        <div >        
+            <p><h1>Rotate header cells 90 degree with JavaScript</h1>
             <div style="margin-left:20px">
                 <table id="t1">
                     <tr >
@@ -51,8 +35,8 @@
                         <td>42 </td>
                         <td><table id="t3">
                                 <tr><th colspan="3">Gender</th><th colspan="2">inside table</th></tr>
-                                <tr><th data-rotate>female <img src="icons/yesorange.jpg"></th><th data-rotate>male</th><th data-rotate>unknown /<br>not specified</th>
-                                    <th>some other<br>heading</th><th data-rotate><span>last Column</span><img src="icons/red.png"></th></tr>
+                                <tr><th data-rotate>female <img src='icons/yesorange.jpg'></th><th data-rotate>male</th><th data-rotate>unknown /<br>not specified</th>
+                                    <th>some other<br>heading</th><th data-rotate><span>last Column</span></th></tr>
                                 <tr><td>4</td><td>66</td><td>99</td><td>new text here <br> and here</td><td></td></tr>
                             </table></td>
                         <td>6</td>
@@ -61,17 +45,20 @@
                 <hr>
                 <table id="t2">
                     <tr><th colspan="3">Gender</th><th colspan="2"></th></tr>
-                    <tr><th data-rotate>female <img src="icons/yesorange.jpg"></th><th data-rotate>male</th><th data-rotate>unknown /<br>not specified</th>
-                        <th>some other<br>heading</th><th data-rotate><span>last Column</span><img src="icons/red.png"></th></tr>
+                    <tr><th data-rotate>female</th><th data-rotate>male</th><th data-rotate>unknown /<br>not specified</th>
+                        <th>some other<br>heading</th><th data-rotate><span>last Column</span></th></tr>
                     <tr><td>4</td><td>66</td><td>99</td><td>new text here <br> and here</td><td></td></tr>
                 </table>              
             </div>
         </div> 
-        <div id=foot class="foot trans"> 
-            <span class="footText">
-                &copy;2007 - 2013 <a href="http://athos-calling.com/hgs/html/index_1.php" style="color:white;">Heinrich Schweitzer</a> All rights reserved.
-            </span>             
-        </div>       
+        <script src="js/vertical.js"></script>      
+        <script>
+            window.addEventListener('load', function () {
+                rotateHeadCell('t1');
+                rotateHeadCell('t2');
+                rotateHeadCell('t3');
+            }, false);
+        </script>
     </body>
 </html>
 
