@@ -68,7 +68,7 @@
                         <td>22</td>             
                         <td>4</td>
                         <td>42 </td>
-                        <td><table id="t3">
+                        <td><table >
                                 <tr><th colspan="3">Gender</th><th colspan="2">inside table</th></tr>
                                 <tr><th data-rotate>female <img src='icons/yesorange.jpg'></th><th data-rotate>male</th><th data-rotate>unknown /<br>not specified</th>
                                     <th>some other<br>heading</th><th data-rotate><span>last Column</span></th></tr>
@@ -78,9 +78,10 @@
                     </tr>
                 </table>
                 <hr>
+                
                 <table id="t2">
                     <tr><th colspan="3">Gender</th><th colspan="2"></th></tr>
-                    <tr><th data-rotate>female</th><th data-rotate>male</th><th data-rotate>unknown /<br>not specified</th>
+                    <tr><th data-rotate >female</th><th data-rotate>male</th><th data-rotate>unknown /<br>not specified</th>
                         <th>some other<br>heading</th><th data-rotate><span>last Column</span></th></tr>
                     <tr><td>4</td><td>66</td><td>99</td><td>new text here <br> and here</td><td></td></tr>
                 </table>              
@@ -91,7 +92,7 @@
             window.addEventListener('load', function () {
                 rotateHeadCell('t1');
                 rotateHeadCell('t2');
-                rotateHeadCell('t3');
+               
             }, false);
         </script>
     </body>
