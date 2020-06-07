@@ -1,33 +1,22 @@
-vertical
-========
+# Vertical
 
-rotate table header cell 90 degree 
+How to instrument your table
 
-As of 12 March 2015 this is working with IE11, Opera 28, FF 36 and Chrome 41.
+- Give your table an ID like ```<table id='tab1'>```   
+- Add data-rotate as an attribute to cells you want to rotate ```<t[h|d] data-rotate>rotate </t[h|d]>``` 
+- Add an event handler for the load event. Inside this handler call  ```rotateHeadCell('tab1');```    
 
-A demo is located at <a href="http://hgsweb.de/vertical/index.html">hgsweb.de/vertical</a>
+### Demo http://hgsweb.de/vertical/index.html 
 
-How to instrument your table:
-<ul>
-    <li>Give your tabel an ID like &lt;table id=tab1>
-    <li>Add 'data-rotate' as an attribute to cells you want to rotate<br>
-        like &lt;th data-rotate>rotate &lt;/th>
-    <li>include the given CSS class .hgs_rotate
-    <li> Add an event handler for the load event. Inside this handler<br>
-        call  <code> rotateHeadCell('tab1');  </code>
-</ul>
 
-Logic
-=====
+### Logic
 
 The table is located using the given id.
-If the first cell of a row is of type TH the 
-iteration looks for cells with a data attribute of <code>data-rotate</code>.
-The content of these cells is wrapped within a DIV that has the
-class <code>.hgs_rotate</code> assigned. This performs the rotation.
-<p>
-    When rotating the content, the current  width of the above DIV will become the new cell height.
-    The cell height for all cells will be set to the highest value found during iteration.
-    Using <code> whitespace:nowrap</code> allows to set the width of the enclosing div to the
-    original height of the content. This way the table cell will shrink down to this new width
-    if possible.
+then all cells with date attribute data-rotate are selected.
+The content of these cells is wrapped within a DIV , then styled to rotate.
+
+When rotating the content, the current  width of the above DIV will become the new cell height.
+The cell height for all cells will be set to the highest value found during iteration.
+Using whitespace:nowrap allows to set the width of the enclosing div to the
+original height of the content. This way the table cell will shrink down to this new width
+if possible.
